@@ -1,0 +1,968 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f7fb;
+}
+
+
+/* Main Home Section */
+
+.hero{
+    min-height:100vh;
+    background:linear-gradient(135deg,#0f172a,#1e3c72);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+    padding:40px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+
+/* Main Title */
+
+.hero h1{
+    color:white;
+    font-size:65px;
+    margin-bottom:30px;
+}
+
+
+/* About Text */
+
+.about-text{
+    color:#dbeafe;
+    font-size:22px;
+    line-height:1.8;
+    margin-bottom:25px;
+}
+
+
+/* Button */
+
+.button-container{
+    margin-top:40px;
+}
+
+.start-btn{
+    padding:18px 45px;
+    border:none;
+    border-radius:12px;
+
+    background:#38bdf8;
+    color:white;
+
+    font-size:22px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.start-btn:hover{
+    background:#0ea5e9;
+    transform:scale(1.05);
+}
+
+
+/* Bottom Information Section */
+
+.info-section{
+    background:#ffffff;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+    padding:70px 50px;
+}
+
+
+/* Cards */
+
+.info-card{
+    background:#e0f2fe;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.info-card h2{
+    color:#0f172a;
+    margin-bottom:20px;
+    font-size:28px;
+}
+
+.info-card p{
+    color:#334155;
+    font-size:18px;
+    line-height:1.6;
+}
+
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .about-text{
+        font-size:18px;
+    }
+
+    .start-btn{
+        width:100%;
+    }
+
+}
+/* Upload Page */
+
+.upload-page{
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    135deg,
+    #dbeafe,
+    #f5d0fe
+    );
+
+    padding:50px 20px;
+}
+
+
+/* Container */
+
+.upload-container{
+    max-width:1000px;
+    margin:auto;
+}
+
+
+/* Main Title */
+
+.upload-container h1{
+    text-align:center;
+    font-size:70px;
+    color:#0f172a;
+    margin-bottom:20px;
+}
+
+
+/* Subtitle */
+
+.upload-subtitle{
+    text-align:center;
+    font-size:22px;
+    color:#475569;
+    margin-bottom:10px;
+}
+
+
+/* Cards */
+
+.upload-card{
+    background:white;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    margin-top:40px;
+
+    box-shadow:
+    0px 8px 20px rgba(0,0,0,0.1);
+}
+
+
+/* Job Description Card */
+
+.job-card{
+    border-left:8px solid #3b82f6;
+}
+
+
+/* Resume Upload Card */
+
+.resume-card{
+    border-left:8px solid #22c55e;
+}
+
+
+/* Card Headings */
+
+.upload-card h2{
+    font-size:32px;
+    margin-bottom:15px;
+    color:#0f172a;
+}
+
+
+/* Card Info */
+
+.card-info{
+    color:#64748b;
+    margin-bottom:20px;
+    font-size:18px;
+}
+
+
+/* Textarea */
+
+textarea{
+    width:100%;
+    height:180px;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    border:1px solid #cbd5e1;
+
+    font-size:18px;
+
+    resize:none;
+}
+
+
+/* Recommendation Box */
+
+.recommendation-box{
+    background:#eff6ff;
+
+    border:2px solid #93c5fd;
+
+    padding:18px;
+
+    border-radius:15px;
+
+    margin-top:20px;
+
+    color:#1e3a8a;
+
+    font-size:17px;
+}
+
+
+/* Upload Box */
+
+.upload-box{
+    border:3px dashed #22c55e;
+
+    border-radius:20px;
+
+    padding:50px;
+
+    text-align:center;
+
+    margin-top:20px;
+
+    background:#f0fdf4;
+}
+
+.upload-box p{
+    margin-bottom:20px;
+    color:#166534;
+    font-size:20px;
+}
+
+
+/* File Upload */
+
+input[type="file"]{
+    font-size:18px;
+}
+
+
+/* Analyze Button */
+
+.analyze-btn{
+
+    width:100%;
+
+    margin-top:40px;
+
+    padding:20px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #7c3aed,
+    #9333ea
+    );
+
+    color:white;
+
+    font-size:26px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+
+/* Hover Effect */
+
+.analyze-btn:hover{
+
+    transform:scale(1.02);
+
+    background:
+    linear-gradient(
+    90deg,
+    #6d28d9,
+    #7e22ce
+    );
+
+}
+
+
+/* Mobile Responsive */
+
+@media(max-width:768px){
+
+    .upload-container h1{
+        font-size:45px;
+    }
+
+    .upload-subtitle{
+        font-size:18px;
+    }
+
+    .upload-card h2{
+        font-size:26px;
+    }
+
+}
+/* Result Page */
+
+.result-page{
+
+    min-height:100vh;
+
+    background:
+    linear-gradient(
+    135deg,
+    #dbeafe,
+    #ede9fe
+    );
+
+    padding:50px 20px;
+}
+
+.result-container{
+    max-width:900px;
+    margin:auto;
+}
+
+
+/* Title */
+
+.result-container h1{
+
+    text-align:center;
+
+    font-size:60px;
+
+    color:#0f172a;
+
+    margin-bottom:40px;
+}
+
+
+/* Score Circle */
+
+.score-circle{
+
+    width:180px;
+    height:180px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #22c55e,
+    #16a34a
+    );
+
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    font-size:45px;
+    font-weight:bold;
+
+    margin:0 auto 40px auto;
+
+    box-shadow:
+    0px 10px 20px rgba(0,0,0,0.2);
+}
+
+
+/* Result Cards */
+
+.result-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+    0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.result-card h2{
+
+    color:#1e3a8a;
+
+    margin-bottom:15px;
+}
+
+
+/* Skills */
+
+.skills span{
+
+    display:inline-block;
+
+    background:#3b82f6;
+
+    color:white;
+
+    padding:12px 18px;
+
+    border-radius:30px;
+
+    margin:8px;
+
+    font-size:16px;
+}
+
+
+/* Status */
+
+.selected{
+
+    color:#16a34a;
+
+    font-size:24px;
+
+    font-weight:bold;
+}
+
+
+/* Button */
+
+.back-btn{
+
+    width:100%;
+
+    padding:20px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #7c3aed,
+    #9333ea
+    );
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+/* Suitable Job Role */
+
+.job-role{
+
+    color:#7c3aed;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    margin-top:10px;
+}
+/* Summary */
+
+.summary{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#334155;
+}
+
+
+/* Job Role */
+
+.job-role{
+
+    color:#7c3aed;
+
+    font-size:30px;
+
+    font-weight:bold;
+}
+
+
+/* Experience */
+
+.experience{
+
+    color:#2563eb;
+
+    font-size:24px;
+
+    font-weight:bold;
+}
+
+
+/* Missing Skills */
+
+.missing-skills span{
+
+    display:inline-block;
+
+    background:#ef4444;
+
+    color:white;
+
+    padding:12px 18px;
+
+    border-radius:30px;
+
+    margin:8px;
+
+    font-size:16px;
+}
+
+
+/* Certifications */
+
+.certifications span{
+
+    display:inline-block;
+
+    background:#14b8a6;
+
+    color:white;
+
+    padding:12px 18px;
+
+    border-radius:30px;
+
+    margin:8px;
+
+    font-size:16px;
+}
+
+
+/* Strength */
+
+.strength{
+
+    color:#16a34a;
+
+    font-size:24px;
+
+    font-weight:bold;
+}
+
+
+/* Recommendation */
+
+.recommendation{
+
+    color:#9333ea;
+
+    font-size:24px;
+
+    font-weight:bold;
+}
+/* Inputs */
+
+input{
+    width:100%;
+
+    padding:18px;
+
+    margin-top:20px;
+
+    border-radius:12px;
+
+    border:1px solid #cbd5e1;
+
+    font-size:18px;
+}
+
+
+/* Theme Cards */
+
+.theme-cards{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+
+    margin-top:40px;
+}
+
+.theme-card{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+    0px 5px 15px rgba(0,0,0,0.1);
+
+    transition:0.3s;
+}
+
+.theme-card:hover{
+
+    transform:translateY(-8px);
+}
+
+.theme-card i{
+
+    font-size:40px;
+
+    color:#7c3aed;
+
+    margin-bottom:15px;
+}
+
+
+/* Upload Box */
+
+.upload-box{
+
+    border:3px dashed #7c3aed;
+
+    border-radius:20px;
+
+    padding:50px;
+
+    text-align:center;
+
+    background:#faf5ff;
+}
+
+.upload-box i{
+
+    font-size:60px;
+
+    color:#9333ea;
+
+    margin-bottom:20px;
+}
+
+
+/* Preview Box */
+
+.preview-box{
+
+    margin-top:20px;
+
+    background:#eff6ff;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    color:#1e3a8a;
+}
+
+
+/* ATS Box */
+
+.ats-box{
+
+    margin-top:20px;
+
+    background:#dcfce7;
+
+    padding:18px;
+
+    border-radius:12px;
+
+    color:#166534;
+
+    font-weight:bold;
+}
+
+.ats-box span{
+
+    color:#15803d;
+}
+
+
+/* Progress Bar */
+
+.progress-container{
+
+    width:100%;
+
+    height:20px;
+
+    background:#e2e8f0;
+
+    border-radius:20px;
+
+    margin-top:25px;
+
+    overflow:hidden;
+}
+
+.progress-bar{
+
+    width:0%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+    90deg,
+    #7c3aed,
+    #9333ea
+    );
+}
+
+
+/* Tips Box */
+
+.tips-box{
+
+    background:#fff7ed;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    margin-top:40px;
+
+    box-shadow:
+    0px 5px 15px rgba(0,0,0,0.1);
+}
+
+.tips-box h2{
+
+    margin-bottom:20px;
+
+    color:#c2410c;
+}
+
+.tips-box ul{
+
+    padding-left:20px;
+}
+
+.tips-box li{
+
+    margin-bottom:12px;
+
+    font-size:18px;
+
+    color:#7c2d12;
+}
+
+
+/* Analyze Button */
+
+.analyze-btn{
+
+    width:100%;
+
+    margin-top:40px;
+
+    padding:22px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #7c3aed,
+    #9333ea
+    );
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.analyze-btn:hover{
+
+    transform:scale(1.02);
+}
+
+
+/* Loading Screen */
+
+.loading-screen{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(15,23,42,0.95);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    flex-direction:column;
+
+    z-index:9999;
+}
+
+.loading-screen h2{
+
+    color:white;
+
+    margin-top:30px;
+
+    font-size:35px;
+}
+
+
+/* Loader */
+
+.loader{
+
+    width:90px;
+    height:90px;
+
+    border:10px solid #cbd5e1;
+
+    border-top:10px solid #9333ea;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+
+    100%{
+        transform:rotate(360deg);
+    }
+
+}
+/* Tooltip */
+
+.theme-card{
+    position:relative;
+}
+
+
+/* Hidden Tooltip */
+
+.tooltip{
+
+    position:absolute;
+
+    bottom:-120px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:260px;
+
+    background:#0f172a;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    line-height:1.6;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:0.3s;
+
+    z-index:10;
+}
+
+
+/* Show Tooltip On Hover */
+
+.theme-card:hover .tooltip{
+
+    opacity:1;
+
+    visibility:visible;
+
+}

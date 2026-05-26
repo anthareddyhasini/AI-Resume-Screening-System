@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Upload Resume</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <section class="upload-page">
+
+        <div class="upload-container">
+
+            <h1>
+                Upload Resume
+            </h1>
+
+            <p class="upload-subtitle">
+
+                Upload candidate resume and provide
+                job description for AI analysis.
+
+            </p>
+
+
+            <!-- Theme Cards -->
+
+            <div class="theme-cards">
+
+                <div class="theme-card">
+
+                    <i class="fa-solid fa-brain"></i>
+
+                    <h3>AI Analysis</h3>
+
+                    <div class="tooltip">
+
+                        Uses AI and NLP
+                        to analyze resumes.
+
+                    </div>
+
+                </div>
+
+                <div class="theme-card">
+
+                    <i class="fa-solid fa-file"></i>
+
+                    <h3>Resume Screening</h3>
+
+                    <div class="tooltip">
+
+                        Automatically filters resumes.
+
+                    </div>
+
+                </div>
+
+                <div class="theme-card">
+
+                    <i class="fa-solid fa-chart-column"></i>
+
+                    <h3>Smart Ranking</h3>
+
+                    <div class="tooltip">
+
+                        Ranks candidates intelligently.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FORM START -->
+
+            <form
+            action="/analyze"
+            method="POST"
+            enctype="multipart/form-data">
+
+
+                <!-- Candidate Details -->
+
+                <div class="upload-card">
+
+                    <h2>
+                        Candidate Details
+                    </h2>
+
+                    <input
+                    type="text"
+                    id="candidateName"
+                    name="candidateName"
+                    placeholder="Candidate Name"
+                    required>
+
+                    <input
+                    type="email"
+                    id="candidateEmail"
+                    name="candidateEmail"
+                    placeholder="Email Address"
+                    required>
+
+                    <input
+                    type="text"
+                    id="candidatePhone"
+                    name="candidatePhone"
+                    placeholder="Phone Number"
+                    required>
+
+                </div>
+
+
+                <!-- Job Role -->
+
+                <div class="upload-card">
+
+                    <h2>
+                        Select Job Sector
+                    </h2>
+
+                    <select
+                    id="jobRole"
+                    name="jobRole"
+                    onchange="fillJobDescription()"
+                    required>
+
+                        <option value="">
+                            -- Select Job Role --
+                        </option>
+
+                        <option value="python">
+                            Python Developer
+                        </option>
+
+                        <option value="frontend">
+                            Frontend Developer
+                        </option>
+
+                        <option value="datascience">
+                            Data Scientist
+                        </option>
+
+                        <option value="aiml">
+                            AI / ML Engineer
+                        </option>
+
+                        <option value="doctor">
+                            Doctor
+                        </option>
+
+                        <option value="teacher">
+                            Teacher
+                        </option>
+
+                        <option value="accountant">
+                            Accountant
+                        </option>
+
+                        <option value="graphic">
+                            Graphic Designer
+                        </option>
+
+                        <option value="content">
+                            Content Writer
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Job Description -->
+
+                <div class="upload-card">
+
+                    <h2>
+                        Job Description
+                    </h2>
+
+                    <textarea
+                    id="jobDescription"
+                    name="jobDescription"
+                    placeholder="Job description will appear here automatically..."
+                    required>
+                    </textarea>
+
+                </div>
+
+
+                <!-- Upload Resume -->
+
+                <div class="upload-card">
+
+                    <h2>
+                        Upload Resume
+                    </h2>
+
+                    <div class="upload-box">
+
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+
+                        <p>
+                            Drag & Drop Resume
+                            OR
+                            Click Below
+                        </p>
+
+                        <input
+                        type="file"
+                        id="resumeFile"
+                        name="resumeFile"
+                        accept=".pdf,.doc,.docx"
+                        required>
+
+                    </div>
+
+
+                    <!-- Resume Preview -->
+
+                    <div class="preview-box">
+
+                        <strong>
+                            Uploaded File:
+                        </strong>
+
+                        <span id="fileName">
+
+                            No file selected
+
+                        </span>
+
+                    </div>
+
+
+                    <!-- ATS -->
+
+                    <div class="ats-box">
+
+                        ATS Compatibility:
+                        <span>
+                            92% ATS Friendly
+                        </span>
+
+                    </div>
+
+
+                    <!-- Progress -->
+
+                    <div class="progress-container">
+
+                        <div class="progress-bar"
+                        id="progressBar">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Submit Button -->
+
+                <button
+                type="submit"
+                class="analyze-btn">
+
+                    Analyze Resume
+
+                </button>
+
+            </form>
+
+
+            <!-- Loading -->
+
+            <div class="loading-screen"
+            id="loadingScreen">
+
+                <div class="loader"></div>
+
+                <h2>
+                    Analyzing Resume...
+                </h2>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script
+    src="{{ url_for('static', filename='script.js') }}">
+    </script>
+</body>
+
+</html>

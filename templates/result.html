@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Resume Result</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<section class="result-page">
+
+    <div class="result-container">
+
+        <h1>
+            Resume Analysis Result
+        </h1>
+
+
+        <!-- Score -->
+
+        <div class="score-circle">
+
+            {{ score }}%
+
+        </div>
+
+
+        <!-- Summary -->
+
+        <div class="result-card">
+
+            <h2>
+                Candidate Summary
+            </h2>
+
+            <p class="summary">
+
+                {{ summary }}
+
+            </p>
+
+        </div>
+
+
+        <!-- Candidate Details -->
+
+        <div class="result-card">
+
+            <h2>
+                AI Extracted Candidate Details
+            </h2>
+
+            <p>
+                <strong>Name:</strong>
+                {{ name }}
+            </p>
+
+            <p>
+                <strong>Email:</strong>
+                {{ email }}
+            </p>
+
+            <p>
+                <strong>Phone:</strong>
+                {{ phone }}
+            </p>
+
+        </div>
+
+
+        <!-- Job Role -->
+
+        <div class="result-card">
+
+            <h2>
+                Suitable Job Role
+            </h2>
+
+            <p class="job-role">
+
+                {{ role }}
+
+            </p>
+
+        </div>
+
+
+        <!-- Resume -->
+
+        <div class="result-card">
+
+            <h2>
+                Uploaded Resume
+            </h2>
+
+            <p>
+
+                {{ filename }}
+
+            </p>
+
+        </div>
+
+
+        <!-- Skills -->
+
+        <div class="result-card">
+
+            <h2>
+                AI Detected Skills
+            </h2>
+
+            <div class="skills">
+
+                {% for skill in skills %}
+
+                    <span>
+
+                        {{ skill }}
+
+                    </span>
+
+                {% endfor %}
+
+            </div>
+
+        </div>
+
+
+        <!-- Recommendation -->
+
+        <div class="result-card">
+
+            <h2>
+                AI Recommendation
+            </h2>
+
+            <p class="recommendation">
+
+                Recommended For Further Screening
+
+            </p>
+
+        </div>
+
+
+        <!-- Status -->
+
+        <div class="result-card">
+
+            <h2>
+                Resume Status
+            </h2>
+
+            <p class="selected">
+
+                Selected For Next Round
+
+            </p>
+
+        </div>
+
+
+        <!-- Button -->
+
+        <a href="/upload">
+
+            <button class="back-btn">
+
+                Analyze Another Resume
+
+            </button>
+
+        </a>
+
+    </div>
+
+</section>
+
+</body>
+
+</html>
